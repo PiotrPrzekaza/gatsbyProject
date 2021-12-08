@@ -1,8 +1,14 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-const Product = ({ slug }) => {
-  return <div></div>;
+const Product = ({ pageContext: { slug }, data: { product } }) => {
+  return (
+    <section>
+      <h2>{product.title}</h2>
+      <div>
+        <p>{product.content}</p>
+      </div>
+    </section>);
 };
 
 export const query = graphql`
@@ -12,10 +18,6 @@ export const query = graphql`
       slug
       title
       content
-      img {
-        size
-      }
-      link
     }
   }
 `;

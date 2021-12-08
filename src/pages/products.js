@@ -3,15 +3,17 @@ import { graphql } from 'gatsby'
 import React from 'react'
 
 const Products = ({ data }) => {
-  const products = data.allDatoCmsProduct.edges
+  const product = data.allDatoCmsProduct.edges
   return (
     <div>
       <h1>Wpisy</h1>
       {
-        products.map(({ node }) => {
+        product.map(({ node }) => {
           return (
-            <div key={node.slug}>{node.title}</div>
-            
+            <div key={node.slug}>
+              <a href={node.slug}>{node.title}</a>
+            </div>
+
           )
         })
       }
