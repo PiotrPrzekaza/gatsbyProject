@@ -1,4 +1,4 @@
-//@ts-check
+
 import { graphql } from 'gatsby'
 import React from 'react'
 
@@ -31,27 +31,12 @@ query{
         slug
         content
         img {
-          size
-          width
-          height
-          path
-          format
-          isImage
-          notes
-          author
-          copyright
-          filename
-          basename
-          exifInfo
-          mimeType
-          blurhash
-          originalId
           url
-          createdAt
-          gatsbyImageData
           alt
-          title
-          customData
+          fluid:fixed(height:400, width:400) {
+            height
+            width
+          }
         }
       }
     }
