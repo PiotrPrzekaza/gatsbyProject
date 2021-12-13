@@ -1,15 +1,25 @@
 {
+  "parser": "@babel/eslint-parser",
   "env": {
     "browser": true,
     "es2021": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "extends": [
+    "airbnb",
+    "prettier",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "plugins": ["prettier"],
   "parserOptions": {
     "ecmaVersion": 2021,
     "sourceType": "module",
     "ecmaFeatures": { "modules": true }
   },
   "rules": {
-    "react/prop-types": 0
-  }
+    "semi": ["error", "always"],
+    "quotes": ["error", "double"],
+    "react/prop-types": 0,
+    "prettier/prettier": ["error"]
+  } // if you choose to use prettier rules.
 }
