@@ -1,10 +1,5 @@
-import React from "react";
-import { graphql } from "gatsby";
-
-
-
-
-
+import React from 'react';
+import { graphql } from 'gatsby';
 
 const Product = ({ pageContext: { slug }, data: { product } }) => {
   return (
@@ -13,11 +8,17 @@ const Product = ({ pageContext: { slug }, data: { product } }) => {
       <div>
         <p>{product.content}</p>
         {product.img.map(({ url, alt, fluid, filename }) => (
-          <img src={url} alt={alt} key={filename} width={fluid.width} height={fluid.height} />
-        )
-        )}
+          <img
+            src={url}
+            alt={alt}
+            key={filename}
+            width={fluid.width}
+            height={fluid.height}
+          />
+        ))}
       </div>
-    </section>);
+    </section>
+  );
 };
 
 export const query = graphql`
@@ -27,14 +28,14 @@ export const query = graphql`
       slug
       title
       content
-      img{
+      img {
         url
         alt
         filename
-        fluid:fixed(height:400, width:400) {
-            height
-            width
-          }
+        fluid: fixed(height: 400, width: 400) {
+          height
+          width
+        }
       }
     }
   }
