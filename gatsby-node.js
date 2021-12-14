@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-const path = require(`path`);
+const path = require('path');
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
