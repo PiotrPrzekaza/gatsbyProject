@@ -14,9 +14,10 @@
   "parserOptions": {
     "ecmaVersion": 2021,
     "sourceType": "module",
-    "ecmaFeatures": { "modules": true }
+    "ecmaFeatures": { "modules": true, "jsx": true }
   },
   "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "semi": ["error", "always"],
     "quotes": ["error", "single"],
     "react/prop-types": 0,

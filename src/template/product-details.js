@@ -3,8 +3,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-const Product = ({ pageContext: { slug }, data: { product } }) => {
+const Product = function ({ pageContext: { slug }, data: { product } }) {
   return (
+    // eslint-disable-next-line react/jsx-filename-extension
     <section>
       <h2>{product.title}</h2>
       <div>

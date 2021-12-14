@@ -12,7 +12,7 @@ const headingStyles = {
   maxWidth: 320,
 };
 
-const IndexPage = () => {
+const IndexPage = function () {
   return (
     <main style={pageStyles}>
       <title>Magiczna Petelka</title>

@@ -26,7 +26,7 @@ const codeStyles = {
 };
 
 // markup
-const NotFoundPage = () => {
+const NotFoundPage = function () {
   return (
     <main style={pageStyles}>
       <title>Not found</title>
