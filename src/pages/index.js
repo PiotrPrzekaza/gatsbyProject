@@ -1,3 +1,4 @@
+/* eslint-disable react/function-component-definition */
 import * as React from 'react';
 
 // styles
@@ -12,13 +13,11 @@ const headingStyles = {
   maxWidth: 320,
 };
 
-const IndexPage = function () {
-  return (
-    <main style={pageStyles}>
-      <title>Magiczna Petelka</title>
-      <h1 style={headingStyles}>Wpisy</h1>
-    </main>
-  );
-};
+const IndexPage = () => (
+  <main style={pageStyles}>
+    <title>Magiczna Petelka</title>
+    <h1 style={headingStyles}>Wpisy</h1>
+  </main>
+);
 
 export default IndexPage;

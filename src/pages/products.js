@@ -1,7 +1,8 @@
+/* eslint-disable react/function-component-definition */
 import { graphql } from 'gatsby';
 import React from 'react';
 
-const Products = function ({ data }) {
+const Products = ({ data }) => {
   const product = data.allDatoCmsProduct.edges;
   return (
     <div>

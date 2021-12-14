@@ -1,28 +1,25 @@
+/* eslint-disable react/function-component-definition */
 /* eslint-disable no-unused-vars */
-
 import React from 'react';
 import { graphql } from 'gatsby';
 
-const Product = function ({ pageContext: { slug }, data: { product } }) {
-  return (
-    // eslint-disable-next-line react/jsx-filename-extension
-    <section>
-      <h2>{product.title}</h2>
-      <div>
-        <p>{product.content}</p>
-        {product.img.map(({ url, alt, fluid, filename }) => (
-          <img
-            src={url}
-            alt={alt}
-            key={filename}
-            width={fluid.width}
-            height={fluid.height}
-          />
-        ))}
-      </div>
-    </section>
-  );
-};
+const Product = ({ pageContext: { slug }, data: { product } }) => (
+  <section>
+    <h2>{product.title}</h2>
+    <div>
+      <p>{product.content}</p>
+      {product.img.map(({ url, alt, fluid, filename }) => (
+        <img
+          src={url}
+          alt={alt}
+          key={filename}
+          width={fluid.width}
+          height={fluid.height}
+        />
+      ))}
+    </div>
+  </section>
+);
 
 export const query = graphql`
   query fetchProduct($slug: String) {
