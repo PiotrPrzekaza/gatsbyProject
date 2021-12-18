@@ -1,4 +1,3 @@
-/* eslint-disable react/function-component-definition */
 import * as React from 'react';
 
 // styles
@@ -12,10 +11,9 @@ const headingStyles = {
   marginBottom: 64,
   maxWidth: 320,
 };
-
 const IndexPage = () => (
   <main style={pageStyles}>
-    <title>Magiczna Petelka</title>
+    <title>Magician Petelka</title>
     <h1 style={headingStyles}>Wpisy</h1>
   </main>
 );

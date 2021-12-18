@@ -1,5 +1,3 @@
-/* eslint-disable react/function-component-definition */
-/* eslint-disable no-undef */
 import * as React from 'react';
 import { Link } from 'gatsby';
 

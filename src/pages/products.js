@@ -1,4 +1,3 @@
-/* eslint-disable react/function-component-definition */
 import { graphql } from 'gatsby';
 import React from 'react';
 

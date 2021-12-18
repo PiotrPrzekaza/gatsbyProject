@@ -1,5 +1,3 @@
-/* eslint-disable react/function-component-definition */
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { graphql } from 'gatsby';
 
@@ -8,10 +6,10 @@ const Product = ({ pageContext: { slug }, data: { product } }) => (
     <h2>{product.title}</h2>
     <div>
       <p>{product.content}</p>
-      {product.img.map(({ url, alt, fluid, filename }) => (
+      {product.img.map(({ url, fluid, filename }) => (
         <img
           src={url}
-          alt={alt}
+          alt={slug}
           key={filename}
           width={fluid.width}
           height={fluid.height}
