@@ -7,7 +7,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await graphql(`
     query {
-      allDatoCmsProduct {
+      allDatoCmsPost {
         edges {
           node {
             slug
@@ -26,14 +26,14 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `);
-  const product = result.data.allDatoCmsProduct.edges;
-  const productTemplate = require.resolve('./src/template/product-details.js');
-  product.forEach(({ node }, index) => {
+  const post = result.data.allDatoCmsPost.edges;
+  const postTemplate = require.resolve('./src/template/blog-post.js');
+  post.forEach(({ node }, index) => {
     const { slug } = node;
 
     createPage({
       path: slug,
-      component: productTemplate,
+      component: postTemplate,
       context: {
         slug,
       },
