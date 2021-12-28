@@ -1,13 +1,12 @@
-/* eslint-disable react/function-component-definition */
 import { graphql } from 'gatsby';
 import React from 'react';
 
-const Products = ({ data }) => {
-  const product = data.allDatoCmsProduct.edges;
+const Blog = ({ data }) => {
+  const posts = data.allDatoCmsPost.edges;
   return (
     <div>
       <h1>Wpisy</h1>
-      {product.map(({ node }) => (
+      {posts.map(({ node }) => (
         <div key={node.slug}>
           <a href={node.slug}>{node.title}</a>
         </div>
@@ -18,7 +17,7 @@ const Products = ({ data }) => {
 
 export const query = graphql`
   query {
-    allDatoCmsProduct {
+    allDatoCmsPost {
       edges {
         node {
           title
@@ -38,4 +37,4 @@ export const query = graphql`
   }
 `;
 
-export default Products;
+export default Blog;

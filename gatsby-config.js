@@ -47,12 +47,13 @@ module.exports = {
     'gatsby-plugin-mdx',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-image',
 
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images/',
+        path: path.join(__dirname, 'src', 'images'),
       },
       __key: 'images',
     },

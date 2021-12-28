@@ -1,17 +1,15 @@
-/* eslint-disable react/function-component-definition */
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { graphql } from 'gatsby';
 
-const Product = ({ pageContext: { slug }, data: { product } }) => (
+const BlogPost = ({ pageContext: { slug }, data: { post } }) => (
   <section>
-    <h2>{product.title}</h2>
+    <h2>{post.title}</h2>
     <div>
-      <p>{product.content}</p>
-      {product.img.map(({ url, alt, fluid, filename }) => (
+      <p>{post.content}</p>
+      {post.img.map(({ url, fluid, filename }) => (
         <img
           src={url}
-          alt={alt}
+          alt={slug}
           key={filename}
           width={fluid.width}
           height={fluid.height}
@@ -23,14 +21,13 @@ const Product = ({ pageContext: { slug }, data: { product } }) => (
 
 export const query = graphql`
   query fetchProduct($slug: String) {
-    product: datoCmsProduct(slug: { eq: $slug }) {
+    product: datoCmsPost(slug: { eq: $slug }) {
       id
       slug
       title
       content
       img {
         url
-        alt
         filename
         fluid: fixed(height: 400, width: 400) {
           height
@@ -41,4 +38,4 @@ export const query = graphql`
   }
 `;
 
-export default Product;
+export default BlogPost;
