@@ -1,5 +1,11 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import {
+  StyledBioContainer,
+  StyledBioTitle,
+  StyledBioContent,
+  StyledBioParagraph,
+} from './bio.styles';
 
 const Bio = () => (
   <StaticQuery
@@ -21,10 +27,10 @@ const Bio = () => (
       }
     `}
     render={(data) => (
-      <article key={data.datoCmsBio.id}>
-        <h1>{data.datoCmsBio.title}</h1>
-        <div>
-          {data.datoCmsBio.about}
+      <StyledBioContainer key={data.datoCmsBio.id}>
+        <StyledBioTitle>{data.datoCmsBio.title}</StyledBioTitle>
+        <StyledBioContent>
+          <StyledBioParagraph>{data.datoCmsBio.about}</StyledBioParagraph>
           <img
             src={data.datoCmsBio.picture.url}
             alt={data.datoCmsBio.picture.filename}
@@ -32,8 +38,8 @@ const Bio = () => (
             width={data.datoCmsBio.picture.fluid.width}
             height={data.datoCmsBio.picture.fluid.height}
           />
-        </div>
-      </article>
+        </StyledBioContent>
+      </StyledBioContainer>
     )}
   />
 );
