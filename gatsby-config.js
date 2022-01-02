@@ -16,9 +16,14 @@ const gatsbyRequiredRules = path.join(
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.yourdomain.tld',
     title: 'magiczna_petelka',
+    description: 'Szydełkowe inspiracje, rekodzieło na zamówienie',
+    siteUrl: 'https://www.magicznapetelka.app',
+    social: {
+      instagram: 'magiczna_petelka',
+    },
   },
+
   plugins: [
     {
       resolve: 'gatsby-plugin-eslint',

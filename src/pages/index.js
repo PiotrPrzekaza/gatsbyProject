@@ -1,10 +1,12 @@
 import * as React from 'react';
 import Hero from '../components/Hero/Hero';
 import NavBar from '../components/NavBar/NavBar';
+import Seo from '../components/Seo/Seo';
 import GlobalStyle from '../styles/GlobalStyle';
 
 const IndexPage = () => (
   <>
+    <Seo title="magiczna_pętelka" />
     <GlobalStyle />
     <header>
       <NavBar />
