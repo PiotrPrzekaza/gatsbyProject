@@ -1,5 +1,5 @@
-import { graphql } from 'gatsby';
 import React from 'react';
+import { graphql } from 'gatsby';
 
 const Blog = ({ data }) => {
   const posts = data.allDatoCmsPost.edges;

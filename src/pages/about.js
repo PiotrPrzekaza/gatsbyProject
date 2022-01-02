@@ -1,11 +1,16 @@
 import React from 'react';
-import Bio from '../components/Bio/bio';
+import Bio from '../components/Bio/Bio';
+import NavBar from '../components/NavBar/NavBar';
+import GlobalStyle from '../styles/GlobalStyle';
 
 const About = () => (
-  <main>
-    <title>O Mnie</title>
-    <Bio />
-  </main>
+  <>
+    <GlobalStyle />
+    <NavBar />
+    <main>
+      <Bio />
+    </main>
+  </>
 );
 
 export default About;

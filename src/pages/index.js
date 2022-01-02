@@ -1,12 +1,16 @@
 import * as React from 'react';
+import Hero from '../components/Hero/Hero';
+import NavBar from '../components/NavBar/NavBar';
 import GlobalStyle from '../styles/GlobalStyle';
 
 const IndexPage = () => (
-  <main>
+  <>
     <GlobalStyle />
-    <title>Magician Petelka</title>
-    <h1>Wpisy</h1>
-  </main>
+    <header>
+      <NavBar />
+    </header>
+    <Hero />
+  </>
 );
 
 export default IndexPage;
