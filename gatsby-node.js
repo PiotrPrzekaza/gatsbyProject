@@ -27,7 +27,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
   const post = result.data.allDatoCmsPost.edges;
-  const postTemplate = require.resolve('./src/template/blog-post.js');
+  const postTemplate = path.resolve('./src/template/blog-post.js');
   post.forEach(({ node }, index) => {
     const { slug } = node;
 

@@ -37,7 +37,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-datocms',
       options: {
-        apiToken: '9fd8e5b4bc138f046016a0b585d9ea',
+        apiToken: '3140ace4c2b5b1e75981f438529627',
       },
     },
     'gatsby-plugin-styled-components',
