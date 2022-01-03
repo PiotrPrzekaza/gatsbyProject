@@ -6,7 +6,7 @@ import GlobalStyle from '../styles/GlobalStyle';
 
 const IndexPage = () => (
   <>
-    <Seo title="magiczna_pętelka" />
+    <Seo title="Strona Główna" />
     <GlobalStyle />
     <header>
       <NavBar />
