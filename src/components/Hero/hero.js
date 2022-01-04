@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeroWrapper, HeroImg } from './Hero.styles';
+import { HeroWrapper, HeroImg, HeroImgWrapper } from './Hero.styles';
 
 const Hero = () => {
   const image =
@@ -15,11 +15,9 @@ const Hero = () => {
           reiciendis! Accusantium, voluptate velit.
         </p>
       </section>
-      <section>
-        <div>
-          <HeroImg src={image} alt="hero img" />
-        </div>
-      </section>
+      <HeroImgWrapper>
+        <HeroImg src={image} alt="hero img" />
+      </HeroImgWrapper>
     </HeroWrapper>
   );
 };

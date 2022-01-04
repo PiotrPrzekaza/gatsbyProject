@@ -2,8 +2,11 @@ import styled from 'styled-components';
 
 const HeroWrapper = styled.main`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 90%;
+  height: 50vh;
+  margin: 0 auto;
 `;
 
 const HeroImg = styled.img`
@@ -13,4 +16,9 @@ const HeroImg = styled.img`
   border-radius: 10px;
 `;
 
-export { HeroWrapper, HeroImg };
+const HeroImgWrapper = styled.section`
+  display: flex;
+  justify-content: center;
+`;
+
+export { HeroWrapper, HeroImg, HeroImgWrapper };

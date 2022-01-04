@@ -1,14 +1,17 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { NavBarWrapper, NavBarLogo, NavBarMenu } from './NavBar.styles';
 
 const NavBar = () => (
-  <nav>
-    <div>Logo</div>
-    <div>
+  <NavBarWrapper>
+    <NavBarLogo>
+      <Link to="/">magiczna_pętelka</Link>
+    </NavBarLogo>
+    <NavBarMenu>
       <Link to="/">Strona Główna</Link>
       <Link to="/blog">Wpisy</Link>
       <Link to="/about">O Mnie</Link>
-    </div>
-  </nav>
+    </NavBarMenu>
+  </NavBarWrapper>
 );
 export default NavBar;
