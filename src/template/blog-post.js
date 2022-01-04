@@ -20,7 +20,7 @@ const BlogPost = ({ pageContext: { slug }, data: { post } }) => (
 );
 
 export const query = graphql`
-  query fetchProduct($slug: String) {
+  query fetchPosts($slug: String) {
     post: datoCmsPost(slug: { eq: $slug }) {
       id
       slug

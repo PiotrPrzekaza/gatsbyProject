@@ -5,7 +5,7 @@ import {
   StyledBioTitle,
   StyledBioContent,
   StyledBioParagraph,
-} from './bio.styles';
+} from './Bio.styles';
 
 const Bio = () => (
   <StaticQuery
