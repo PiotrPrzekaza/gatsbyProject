@@ -9,8 +9,8 @@ const NavBar = () => (
     </NavBarLogo>
     <NavBarMenu>
       <Link to="/">Strona Główna</Link>
-      <Link to="/blog">Wpisy</Link>
-      <Link to="/about">O Mnie</Link>
+      <Link to="/blogPage">Wpisy</Link>
+      <Link to="/aboutPage">O Mnie</Link>
     </NavBarMenu>
   </NavBarWrapper>
 );

@@ -6,14 +6,8 @@ const BlogPost = ({ pageContext: { slug }, data: { post } }) => (
     <h2>{post.title}</h2>
     <div>
       <p>{post.content}</p>
-      {post.img.map(({ url, fluid, filename }) => (
-        <img
-          src={url}
-          alt={slug}
-          key={filename}
-          width={fluid.width}
-          height={fluid.height}
-        />
+      {post.images.map(({ filename, fluid }) => (
+        <img src={fluid.src} alt={slug} key={filename} />
       ))}
     </div>
   </section>
@@ -26,11 +20,12 @@ export const query = graphql`
       slug
       title
       content
-      img {
+      images {
         url
         filename
         fluid: fixed(height: 400, width: 400) {
           height
+          src
           width
         }
       }

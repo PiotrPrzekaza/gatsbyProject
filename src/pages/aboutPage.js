@@ -3,7 +3,7 @@ import Bio from '../components/Bio/Bio';
 import Layout from '../components/Layout/Layout';
 import Seo from '../components/Seo/Seo';
 
-const About = () => (
+const AboutPage = () => (
   <>
     <Seo title="O Mnie" />
     <Layout>
@@ -12,4 +12,4 @@ const About = () => (
   </>
 );
 
-export default About;
+export default AboutPage;

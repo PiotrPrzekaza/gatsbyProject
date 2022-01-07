@@ -13,12 +13,13 @@ exports.createPages = async ({ graphql, actions }) => {
             slug
             title
             content
-            img {
+            images {
               url
               alt
               fluid: fixed(height: 400, width: 400) {
                 height
                 width
+                src
               }
             }
           }
