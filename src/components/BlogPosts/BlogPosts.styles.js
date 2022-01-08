@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 const BlogPostsWrapper = styled.main`
+  height: 100%;
+  width: 100%;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
+  align-content: center;
 `;
 
 const BlogPostsTitle = styled.h1`

@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     background-color:#f5f5f5;
     width: 90vw;
+    height: 100vh;
     margin: 0 auto;
   }
   *,
