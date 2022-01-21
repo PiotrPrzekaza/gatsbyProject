@@ -1,16 +1,23 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Seo from '../components/Seo/Seo';
+import Layout from '../components/Layout/Layout';
 
 const BlogPost = ({ pageContext: { slug }, data: { post } }) => (
-  <section>
-    <h2>{post.title}</h2>
-    <div>
-      <p>{post.content}</p>
-      {post.images.map(({ filename, fluid }) => (
-        <img src={fluid.src} alt={slug} key={filename} />
-      ))}
-    </div>
-  </section>
+  <>
+    <Seo title={post.title} />
+    <Layout>
+      <section>
+        <h2>{post.title}</h2>
+        <div>
+          <p>{post.content}</p>
+          {post.images.map(({ filename, fluid }) => (
+            <img src={fluid.src} alt={slug} key={filename} />
+          ))}
+        </div>
+      </section>
+    </Layout>
+  </>
 );
 
 export const query = graphql`

@@ -1,6 +1,11 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { BlogPostsWrapper, BlogPostsTitle } from './BlogPosts.styles';
+// import { StaticImage } from 'gatsby-plugin-image';
+import {
+  BlogPostsWrapper,
+  BlogPostsTitle,
+  BlogPostsImg,
+} from './BlogPosts.styles';
 
 const BlogPosts = () => {
   const data = useStaticQuery(graphql`
@@ -27,13 +32,18 @@ const BlogPosts = () => {
     }
   `);
 
+  // eslint-disable-next-line no-console
+  console.log(data);
   const posts = data.allDatoCmsPost.edges;
+
   return (
     <BlogPostsWrapper>
       <BlogPostsTitle>Wpisy</BlogPostsTitle>
-      {posts.map(({ node }) => (
-        <div key={node.slug}>
-          <a href={node.slug}>{node.title}</a>
+      {posts.map(([slug, title, images]) => (
+        <div key={slug}>
+          <a href={slug}>{title}</a>
+
+          <BlogPostsImg src={images.url} alt="" />
         </div>
       ))}
     </BlogPostsWrapper>
