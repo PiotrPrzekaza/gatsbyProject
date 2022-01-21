@@ -4,12 +4,10 @@ import Layout from '../components/Layout/Layout';
 import Seo from '../components/Seo/Seo';
 
 const IndexPage = () => (
-  <>
+  <Layout>
     <Seo title="Strona Główna" />
-    <Layout>
-      <Hero />
-    </Layout>
-  </>
+    <Hero />
+  </Layout>
 );
 
 export default IndexPage;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const BlogPostsWrapper = styled.main`
+const BlogPostsWrapper = styled.section`
   height: 100%;
   width: 100%;
   display: flex;
